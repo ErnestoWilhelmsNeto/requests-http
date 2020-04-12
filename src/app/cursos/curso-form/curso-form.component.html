@@ -1,0 +1,52 @@
+<form classs="needs-validation" novalidate [formGroup]="form">
+
+    <div class="form-row">
+        <!--div class="col-md-4 mb-3">
+            <label for="id">Identif. do Curso</label>
+            <input type="text" class="formControl" id="id" placeholder="Identif. do Curso" formControlName="id"
+                [ngClass]="{ 'is-invalid': submitted && hasError('id')}">
+            <div class="invalid-feedback" *ngIf="hasError('id') && hasError('id')['required']">
+                Por favor informe Id
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('id') && hasError('id')['minLength']">
+                max 1 caracteres
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('id') && hasError('id')['maxLength']">
+                max 20 caracteres
+            </div>
+        </div-->
+        <div class="col-md-4 mb-3">
+            <label for="nome">Nome do Curso</label>
+            <input type="text" class="formControl" id="nome" placeholder="Nome do Curso" formControlName="nome"
+                [ngClass]="{ 'is-invalid': submitted && hasError('nome')}">
+            <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['required']">
+                Por favor informe Nome
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['minLength']">
+                max 4 caracteres
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['maxLength']">
+                max 200 caracteres
+            </div>
+        </div>
+        <div class=" col-md-4 mb-3">
+            <label for="autor">Autor do Curso</label>
+            <input type="text" class="formControl" id="autor" placeholder="Nome do Autor" formControlName="autor"
+                [ngClass]="{ 'is-invalid': submitted && hasError('autor')}">
+            <div class="invalid-feedback" *ngIf="hasError('autor') && hasError('autor')['required']">
+                Por favor informe Autor
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('autor') && hasError('autor')['minLength']">
+                max 5 caracteres
+            </div>
+            <div class="invalid-feedback" *ngIf="hasError('autor') && hasError('autor')['maxLength']">
+                max 200 caracteres
+            </div>
+        </div>
+        <div class=" form-row" style="margin-top: 10px">
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Confirma</button>
+            <button type="button" class="btn btn-default" (click)="onCancel()">Cancelar</button>
+        </div>
+
+    </div>
+</form>
