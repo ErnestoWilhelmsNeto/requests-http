@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "http-requests-ernesto"
+  },
+  "targets": {
+    "http-requests-ernesto": {
+      "hosting": {
+        "requests-http": [
+          "http-requests-ernesto"
+        ]
+      }
+    }
+  }
+}

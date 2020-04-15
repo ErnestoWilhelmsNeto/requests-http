@@ -4,8 +4,8 @@ import { Observable, Subscription, empty, of, Subject, EMPTY } from 'rxjs';
 import { delay, catchError, switchMap, take } from 'rxjs/operators';
 import { AlertModalService } from 'src/app/shared/alertmodal.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { Cursos2Service } from './cursos2.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
     selector: 'app-cursos-lista',

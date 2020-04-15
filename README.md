@@ -31,3 +31,41 @@ json-server --watch db.json
 
 cd server 
 npm run start 
+
+npm run build para deploy de produção
+
+firebase init
+firebase login
+npm run build
+
+firebase deploy 
+
+Project Console: https://console.firebase.google.com/project/http-requests-ernesto/overview
+Hosting URL: https://http-requests-ernesto.web.app
+
+ou
+
+ng add @angular/fire
+ng deploy
+
+
+
+Docker
+
+FROM node:10.13-alpine as angular
+WORKDIR /app
+COPY package.json /app
+RUN npm install --silent && mv node_modules ../
+COPY . .
+EXPOSE 3000
+RUN npm run build
+
+FROM nginx:alpine
+VOLUME /var/cache/nginx
+COPY --from=angular app/dist/requests-http /usr/share/nginx/html
+COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
+
+
+# docker build -t curso-angular .
+# docker run -p 8081:80 curso-angular
+
